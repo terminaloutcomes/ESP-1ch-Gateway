@@ -719,7 +719,7 @@ void inline OLEDDisplay::drawInternal(int16_t xMove, int16_t yMove, int16_t widt
     int16_t xPos = xMove + (i / rasterHeight);
     int16_t yPos = ((yMove >> 3) + (i % rasterHeight)) * DISPLAY_WIDTH;
 
-    int16_t yScreenPos = yMove + yOffset;
+    //int16_t yScreenPos = yMove + yOffset;
     int16_t dataPos    = xPos  + yPos;
 
     if (dataPos >=  0  && dataPos < DISPLAY_BUFFER_SIZE &&
