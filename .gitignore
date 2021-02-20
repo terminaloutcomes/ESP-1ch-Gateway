@@ -10,4 +10,4 @@
 # user configuration options
 platformio_override.ini
 src/user_config_node.h
-src/user_config_gateway.h
+src/user_config_gateway.h.vscode
