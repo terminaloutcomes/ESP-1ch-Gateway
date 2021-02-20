@@ -22,6 +22,10 @@
 #include "user_config_node.h"         // Configuration overrides for configNode.h
 
 
+#ifndef _HOSTNAME
+	#define _HOSTNAME ""
+#endif
+
 // It is possible to use the gateway as a normal sensor node also. In this case,
 // substitute the node info below.
 #if _GATEWAYNODE==1

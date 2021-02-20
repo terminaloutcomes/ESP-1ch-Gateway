@@ -300,9 +300,11 @@ static void setVariables(const char *cmd, const char *arg)
 		gwayConfig.trusted=atoi(arg);
 		if (atoi(arg) == 1) {
 			gwayConfig.trusted = (gwayConfig.trusted +1)%4;
+			mPrint("Incrementing trusted");
 		}	
 		else if (atoi(arg) == -1) {
 			gwayConfig.trusted = (gwayConfig.trusted -1)%4;
+			mPrint("Decrementing trusted");
 		}
 		writeGwayCfg(_CONFIGFILE, &gwayConfig );					// Save configuration to file
 	}
@@ -953,7 +955,7 @@ static void messageHistory()
 			case 3: // Value and we do not print unless also defined for LOCAL_SERVER
 			default:
 #				if _MONITOR>=1
-					mPrint("Unknow value for gwayConfig.trusted");
+					mPrint("Unknown value for gwayConfig.trusted");
 #				endif //_MONITOR		
 				break;
 		}
@@ -1079,7 +1081,7 @@ static void nodeHistory()
 						// Value 3 and we do not print unless also defined for LOCAL_SERVER
 					default:
 #						if _MONITOR>=1
-							mPrint("Unknow value for gwayConfig.trusted");
+							mPrint("Unknown value for gwayConfig.trusted");
 #						endif //_MONITOR
 					break;
 				}	

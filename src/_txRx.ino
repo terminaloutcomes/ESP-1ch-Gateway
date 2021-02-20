@@ -214,7 +214,7 @@ int sendPacket(uint8_t *buf, uint8_t len)
 // We will probably answer in RX with RF==12 and use special answer frequency
 //
 	LoraDown.powe	= root["txpk"]["powe"];				// The server determines the power
-	const float ff	= root["txpk"]["freq"];				// eg 868.1 (RX1) or 869.525 (RX2)
+	//const float ff	= root["txpk"]["freq"];				// eg 868.1 (RX1) or 869.525 (RX2)
 	// convert double frequency (MHz) into uint32_t frequency in Hz.
 	//LoraDown.freq = (uint32_t) ((uint32_t)((ff+0.000015)*1000)) * 1000;		// MMM Not correct
 	LoraDown.freq = (uint32_t) freqs[gwayConfig.ch].dwnFreq;

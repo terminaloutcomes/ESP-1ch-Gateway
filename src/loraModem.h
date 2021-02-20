@@ -123,6 +123,21 @@ vector freqs [] = {
 	{ 904600000, 500, 8,  8, 0        , 0,   0, 00},			// Up Ch 7, SF8BW5000, no Dwn 0 																						// SFxxxBW500
 };
 
+
+#elif defined(AU915_928)
+// Australian plan or TTN/Lora frequencies
+vector freqs [] = { 
+	{ 916800000, 125, 7, 12, 923300000, 500, 7, 12},			// Channel 0, 916.8 MHz primary
+	{ 917000000, 125, 7, 12, 923900000, 500, 7, 12},			// Channel 1, 917.0 MHz mandatory
+	{ 917200000, 125, 7, 12, 924500000, 500, 7, 12},			// Channel 2, 917.2 MHz mandatory
+	{ 917400000, 125, 7, 12, 925100000, 500, 7, 12},			// Channel 3, 917.4 MHz Optional
+	{ 917600000, 125, 7, 12, 925700000, 500, 7, 12},			// Channel 4, 917.6 MHz Optional
+	{ 917800000, 125, 7, 12, 926300000, 500, 7, 12},			// Channel 5, 917.8 MHz Optional
+	{ 918000000, 125, 7, 12, 926900000, 500, 7, 12}, 			// Channel 6, 918.0 MHz Optional 
+	{ 918200000, 125, 7, 12, 927500000, 500, 7, 12}	,  			// Channel 7, 918.2 MHz Optional
+	{ 917500000, 500, 8,  8, 923300000, 500, 12, 12}	 		// Channel 8, 917.5 SF8BW500 MHz Optional Uplink
+};
+
 #elif defined(AU925_928)
 // Australian plan or TTN/Lora frequencies
 vector freqs [] = { 
@@ -286,7 +301,7 @@ struct pins {
 // MOSI 13 / D7
 // CLK  14 / D5
 // SS   16 / D0
-#error "Pin Definitions _PIN_OUT must be defined in loraModem.h"
+	#error "Pin Definitions _PIN_OUT must be defined in loraModem.h"
 #endif
 
 // stat_t contains the statistics that are kept for a message. 

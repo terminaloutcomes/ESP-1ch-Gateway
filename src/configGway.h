@@ -87,9 +87,9 @@
 // AS923		(Not Used)
 // You can find the definitions in "loraModem.h" and frequencies in
 // See https://www.thethingsnetwork.org/docs/lorawan/frequency-plans.html
-#ifndef EU863_870
-#	define EU863_870 1
-#endif
+// #ifndef EU863_870
+// #	define EU863_870 1
+// #endif
  
 
 // Define the CLASS mode of the gateway

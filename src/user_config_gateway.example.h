@@ -15,4 +15,4 @@
 // You can find the definitions in "loraModem.h" and frequencies in
 // See https://www.thethingsnetwork.org/docs/lorawan/frequency-plans.html
 #undef EU863_870
-#define AU925_928 1
+#define AU915_928 1

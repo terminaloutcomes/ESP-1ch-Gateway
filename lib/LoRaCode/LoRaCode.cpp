@@ -519,8 +519,8 @@ int LoRaCode::dLen (byte *msg) {
 //	The number of bytes read from the buffer
 // --------------------------------------------------------------------------------
 int LoRaCode::dMsg (byte *msg, byte *val, byte *mode) {
-	float res;
-	byte len = msg[0] & 0x03;					// Last 2 bits
+	//float res;
+	//byte len = msg[0] & 0x03;					// Last 2 bits
 	*mode = (byte) (msg[0] >> 2);
 	switch (*mode) {
 		case O_TEMP:
